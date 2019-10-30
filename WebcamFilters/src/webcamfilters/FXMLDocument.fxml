@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="643.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="webcamfilters.FXMLDocumentController">
+    <children>
+      <ImageView fx:id="webcamImageView" fitHeight="480.0" fitWidth="640.0" layoutX="30.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+        <Button fx:id="startWebcamButton" layoutX="290.0" layoutY="555.0" onAction="#handleStartWebcamButtonAction" text="Start Webcam Feed" />
+        <Label fx:id="messageLabel" alignment="CENTER" layoutX="30.0" layoutY="599.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="640.0" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="26.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="640.0" text="Web Cam Filters" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="greyScalesCheckBox" layoutX="36.0" layoutY="547.0" mnemonicParsing="false" text="Grey Scales" />
+      <CheckBox fx:id="cannyEdgeDetectionCheckBox" layoutX="435.0" layoutY="547.0" mnemonicParsing="false" text="Canny Edge Detection" />
+      <Slider fx:id="cannyBlurSlider" blockIncrement="2.0" layoutX="461.0" layoutY="575.0" max="25.0" min="1.0" prefHeight="14.0" prefWidth="53.0" value="1.0" />
+      <Slider fx:id="cannyThresholdSlider" layoutX="592.0" layoutY="575.0" max="200.0" prefHeight="14.0" prefWidth="95.0" />
+      <Label layoutX="435.0" layoutY="572.0" text="Blur" />
+      <Label layoutX="521.0" layoutY="574.0" text="Threshold" />
+      <CheckBox fx:id="erodeCheckBox" layoutX="36.0" layoutY="572.0" mnemonicParsing="false" text="Erode" />
+      <CheckBox fx:id="spiralCheckBox" layoutX="142.0" layoutY="572.0" mnemonicParsing="false" text="Spiral" />
+      <CheckBox fx:id="blackenCheckBox" layoutX="142.0" layoutY="547.0" mnemonicParsing="false" text="Blacken" />
+      <CheckBox fx:id="houghCheckBox" layoutX="36.0" layoutY="599.0" mnemonicParsing="false" text="Detect circles" />
+    </children>
+</AnchorPane>
